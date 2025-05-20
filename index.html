@@ -1,0 +1,1114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>CinemaX - Современный кинотеатр</title>
+    <meta name="description" content="CinemaX - современный кинотеатр с новинками кино и комфортными залами">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+    <!-- Навигация и логотип -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div id="logo">
+                    <a href="#home">Cinema<span>X</span></a>
+                </div>
+                <nav id="nav">
+                    <ul>
+                        <li><a href="#home" class="active">Главная</a></li>
+                        <li><a href="#movies">Фильмы</a></li>
+                        <li><a href="#schedule">Расписание</a></li>
+                        <li><a href="#news">Новости</a></li>
+                        <li><a href="#about">О нас</a></li>
+                        <li><a href="#rules">Правила</a></li>
+                        <li><a href="#contact">Контакты</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <button class="btn-login"><i class="fas fa-user"></i> Войти</button>
+                    <div id="burger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Главная секция -->
+    <section id="home" class="hero">
+        <div id="slider">
+            <div id="sliderWrapper">
+                <div class="slide active">
+                    <img src="img/hero-banner.jpg" alt="Дюна 2">
+                    <div class="slide-overlay"></div>
+                    <div class="slide-content">
+                        <span class="slide-badge">Премьера</span>
+                        <h2>Дюна 2</h2>
+                        <p>Только в нашем кинотеатре с 15 июня</p>
+                        <div class="slide-actions">
+                            <button class="btn btn-primary book-tickets" data-movie="Дюна 2" data-id="movie1">Купить билет</button>
+                            <button class="btn btn-outline watch-trailer" data-trailer="https://www.youtube.com/embed/aSHs224Dge0">
+                                <i class="fas fa-play"></i> Смотреть трейлер
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="img/hero-banner2.jpg" alt="Оппенгеймер">
+                    <div class="slide-overlay"></div>
+                    <div class="slide-content">
+                        <span class="slide-badge">Новинка</span>
+                        <h2>Оппенгеймер</h2>
+                        <p>Ограниченный показ - 3 дня</p>
+                        <div class="slide-actions">
+                            <button class="btn btn-primary book-tickets" data-movie="Оппенгеймер" data-id="movie2">Купить билет</button>
+                            <button class="btn btn-outline watch-trailer" data-trailer="https://www.youtube.com/embed/uYPbbksJxIg">
+                                <i class="fas fa-play"></i> Смотреть трейлер
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="img/slide3.jpg" alt="Фильм 3">
+                    <div class="slide-overlay"></div>
+                    <div class="slide-content">
+                        <span class="slide-badge">Специальное предложение</span>
+                        <h2>Специальные показы</h2>
+                        <p>Кино по сниженным ценам</p>
+                        <div class="slide-actions single-button">
+                            <button class="btn btn-primary book-tickets wide-button" data-movie="Специальные показы" data-id="special">Купить билет</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button id="prevBtn"><i class="fas fa-chevron-left"></i></button>
+            <button id="nextBtn"><i class="fas fa-chevron-right"></i></button>
+            <div class="slider-dots"></div>
+        </div>
+    </section>
+
+    <!-- Преимущества -->
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-couch"></i>
+                    </div>
+                    <h3>Комфортные залы</h3>
+                    <p>Удобные кресла с подогревом и увеличенным пространством</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-ticket-alt"></i>
+                    </div>
+                    <h3>Онлайн-бронирование</h3>
+                    <p>Быстрое бронирование и выбор мест через сайт</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>Кино-бар</h3>
+                    <p>Широкий выбор закусок и напитков</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-parking"></i>
+                    </div>
+                    <h3>Бесплатная парковка</h3>
+                    <p>Просторная парковка для наших гостей</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Афиша фильмов -->
+    <section id="movies" class="section">
+        <div class="container">
+            <h2 class="section-title">Сейчас в кино</h2>
+            <div class="movies-grid">
+                <div class="movie-item" data-id="movie1">
+                    <div class="movie-poster">
+                        <img src="img/movie1.jpg" alt="Дюна 2">
+                        <div class="movie-rating">8.7</div>
+                        <div class="movie-age">16+</div>
+                        <div class="movie-overlay">
+                            <button class="btn-play watch-trailer" data-trailer="https://www.youtube.com/embed/aSHs224Dge0">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="movie-info">
+                        <h3>Дюна 2</h3>
+                        <p class="movie-genre">Боевик, Приключения</p>
+                        <p class="movie-duration"><i class="far fa-clock"></i> 2ч 15мин</p>
+                        <div class="movie-actions">
+                            <button class="btn-buy book-tickets" data-movie="Дюна 2" data-id="movie1">Купить билет</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-item" data-id="movie2">
+                    <div class="movie-poster">
+                        <img src="img/movie2.jpg" alt="Оппенгеймер">
+                        <div class="movie-rating">9.1</div>
+                        <div class="movie-age">12+</div>
+                        <div class="movie-overlay">
+                            <button class="btn-play watch-trailer" data-trailer="https://www.youtube.com/embed/uYPbbksJxIg">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="movie-info">
+                        <h3>Оппенгеймер</h3>
+                        <p class="movie-genre">Фантастика, Драма</p>
+                        <p class="movie-duration"><i class="far fa-clock"></i> 2ч 45мин</p>
+                        <div class="movie-actions">
+                            <button class="btn-buy book-tickets" data-movie="Оппенгеймер" data-id="movie2">Купить билет</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-item" data-id="movie3">
+                    <div class="movie-poster">
+                        <img src="img/movie3.jpg" alt="Барби">
+                        <div class="movie-rating">7.8</div>
+                        <div class="movie-age">18+</div>
+                        <div class="movie-overlay">
+                            <button class="btn-play watch-trailer" data-trailer="https://www.youtube.com/embed/pBk4NYhWNMM">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="movie-info">
+                        <h3>Барби</h3>
+                        <p class="movie-genre">Триллер, Детектив</p>
+                        <p class="movie-duration"><i class="far fa-clock"></i> 1ч 55мин</p>
+                        <div class="movie-actions">
+                            <button class="btn-buy book-tickets" data-movie="Барби" data-id="movie3">Купить билет</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-item" data-id="movie4">
+                    <div class="movie-poster">
+                        <img src="img/movie4.jpg" alt="Крушение">
+                        <div class="movie-rating">8.3</div>
+                        <div class="movie-age">6+</div>
+                        <div class="movie-overlay">
+                            <button class="btn-play watch-trailer" data-trailer="https://www.youtube.com/embed/r_aCiFeRw2Q">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="movie-info">
+                        <h3>Крушение</h3>
+                        <p class="movie-genre">Мультфильм, Комедия</p>
+                        <p class="movie-duration"><i class="far fa-clock"></i> 1ч 40мин</p>
+                        <div class="movie-actions">
+                            <button class="btn-buy book-tickets" data-movie="Крушение" data-id="movie4">Купить билет</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-item" data-id="movie5">
+                    <div class="movie-poster">
+                        <img src="img/movie5.jpg" alt="Джокер 2">
+                        <div class="movie-rating">9.0</div>
+                        <div class="movie-age">18+</div>
+                        <div class="movie-overlay">
+                            <button class="btn-play watch-trailer" data-trailer="https://www.youtube.com/embed/6Gqk6ohloTU">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="movie-info">
+                        <h3>Джокер 2</h3>
+                        <p class="movie-genre">Триллер, Драма</p>
+                        <p class="movie-duration"><i class="far fa-clock"></i> 2ч 20мин</p>
+                        <div class="movie-actions">
+                            <button class="btn-buy book-tickets" data-movie="Джокер 2" data-id="movie5">Купить билет</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-item" data-id="movie6">
+                    <div class="movie-poster">
+                        <img src="img/movie6.jpg" alt="Гладиатор 2">
+                        <div class="movie-rating">8.9</div>
+                        <div class="movie-age">16+</div>
+                        <div class="movie-overlay">
+                            <button class="btn-play watch-trailer" data-trailer="https://www.youtube.com/embed/d-uDsDKCyrU">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="movie-info">
+                        <h3>Гладиатор 2</h3>
+                        <p class="movie-genre">Боевик, Драма</p>
+                        <p class="movie-duration"><i class="far fa-clock"></i> 2ч 30мин</p>
+                        <div class="movie-actions">
+                            <button class="btn-buy book-tickets" data-movie="Гладиатор 2" data-id="movie6">Купить билет</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-item" data-id="movie7">
+                    <div class="movie-poster">
+                        <img src="img/movie7.jpg" alt="Аватар 3">
+                        <div class="movie-rating">8.8</div>
+                        <div class="movie-age">12+</div>
+                        <div class="movie-overlay">
+                            <button class="btn-play watch-trailer" data-trailer="https://www.youtube.com/embed/a8Gx8wiNbs8">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="movie-info">
+                        <h3>Аватар 3</h3>
+                        <p class="movie-genre">Фантастика, Приключения</p>
+                        <p class="movie-duration"><i class="far fa-clock"></i> 2ч 50мин</p>
+                        <div class="movie-actions">
+                            <button class="btn-buy book-tickets" data-movie="Аватар 3" data-id="movie7">Купить билет</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-item" data-id="movie8">
+                    <div class="movie-poster">
+                        <img src="img/movie8.jpg" alt="Веном 3">
+                        <div class="movie-rating">7.9</div>
+                        <div class="movie-age">16+</div>
+                        <div class="movie-overlay">
+                            <button class="btn-play watch-trailer" data-trailer="https://www.youtube.com/embed/9J45m0o7D2A">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="movie-info">
+                        <h3>Веном 3</h3>
+                        <p class="movie-genre">Фантастика, Боевик</p>
+                        <p class="movie-duration"><i class="far fa-clock"></i> 2ч 05мин</p>
+                        <div class="movie-actions">
+                            <button class="btn-buy book-tickets" data-movie="Веном 3" data-id="movie8">Купить билет</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-item" data-id="movie9">
+                    <div class="movie-poster">
+                        <img src="img/movie9.jpg" alt="Миссия невыполнима 8">
+                        <div class="movie-rating">8.5</div>
+                        <div class="movie-age">16+</div>
+                        <div class="movie-overlay">
+                            <button class="btn-play watch-trailer" data-trailer="https://www.youtube.com/embed/avz06PDqDbM">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="movie-info">
+                        <h3>Миссия невыполнима 8</h3>
+                        <p class="movie-genre">Боевик, Триллер</p>
+                        <p class="movie-duration"><i class="far fa-clock"></i> 2ч 25мин</p>
+                        <div class="movie-actions">
+                            <button class="btn-buy book-tickets" data-movie="Миссия невыполнима 8" data-id="movie9">Купить билет</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Расписание сеансов -->
+    <section id="schedule" class="section bg-gray">
+        <div class="container">
+            <h2 class="section-title">Расписание сеансов</h2>
+            <div class="schedule-tabs">
+                <button class="tab-btn active" data-day="today">Сегодня</button>
+                <button class="tab-btn" data-day="tomorrow">Завтра</button>
+                <button class="tab-btn" data-day="week">Неделя</button>
+            </div>
+            <div class="schedule-content">
+                <!-- Контент бдет загружаться через JS -->
+                <div class="loading-spinner"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Новости и акции -->
+    <section id="news" class="section">
+        <div class="container">
+            <h2 class="section-title">Новости и акции</h2>
+
+            <div class="news-filters">
+                <div class="filter-categories">
+                    <button class="filter-btn active" data-filter="all">Все</button>
+                    <button class="filter-btn" data-filter="action">Акции</button>
+                    <button class="filter-btn" data-filter="news">Новости</button>
+                    <button class="filter-btn" data-filter="event">События</button>
+                </div>
+                <div class="filter-search">
+                    <input type="text" placeholder="Поиск по новостям...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+
+            <div class="news-grid">
+                <div class="news-item" data-category="action">
+                    <div class="news-image">
+                        <img src="img/news1.jpg" alt="Новость 1">
+                        <div class="news-badge">Акция</div>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-date">15 июня 2025</div>
+                        <h3>Специальные цены на утренние сеансы</h3>
+                        <p>С 1 по 30 июня скидка 30% на все сеансы до 12:00</p>
+                    </div>
+                </div>
+                <div class="news-item" data-category="news">
+                    <div class="news-image">
+                        <img src="img/news2.jpg" alt="Новость 2">
+                        <div class="news-badge">Новость</div>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-date">10 июня 2025</div>
+                        <h3>Новый зал премиум-класса</h3>
+                        <p>Открытие зала с креслами повышенной комфортности</p>
+                    </div>
+                </div>
+                <div class="news-item" data-category="event">
+                    <div class="news-image">
+                        <img src="img/news3.jpg" alt="Новость 3">
+                        <div class="news-badge">Событие</div>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-date">5 июня 2025</div>
+                        <h3>Кинофестиваль европейского кино</h3>
+                        <p>Специальная программа с 20 по 27 июня</p>
+                    </div>
+                </div>
+                <div class="news-item" data-category="news">
+                    <div class="news-image">
+                        <img src="img/news4.jpg" alt="Новость 4">
+                        <div class="news-badge">Новость</div>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-date">1 июня 2025</div>
+                        <h3>Обновление кинобара</h3>
+                        <p>Мы расширили ассортимент нашего кинобара! Теперь вы можете насладиться новыми вкусными закусками и напитками во время просмотра фильма.</p>
+                    </div>
+                </div>
+                <div class="news-item" data-category="action">
+                    <div class="news-image">
+                        <img src="img/news5.jpg" alt="Новость 5">
+                        <div class="news-badge">Акция</div>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-date">28 мая 2025</div>
+                        <h3>Семейные выходные</h3>
+                        <p>Каждые выходные скидка 20% на семейные билеты. Приходите всей семьей и наслаждайтесь просмотром фильмов по специальной цене!</p>
+                    </div>
+                </div>
+                <div class="news-item" data-category="event">
+                    <div class="news-image">
+                        <img src="img/news6.jpg" alt="Новость 6">
+                        <div class="news-badge">Событие</div>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-date">20 мая 2025</div>
+                        <h3>Встреча с режиссером</h3>
+                        <p>25 июня в нашем кинотеатре состоится встреча с известным режиссером после премьеры его нового фильма. Не пропустите возможность задать вопросы!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- О нас -->
+    <section id="about" class="section bg-dark">
+        <div class="container">
+            <h2 class="section-title white">О нас</h2>
+
+
+            <div class="about-text">
+                <h3>Наша история</h3>
+                <p>Кинотеатр CinemaX был основан в 2010 году группой энтузиастов, объединенных любовью к кинематографу. Начав с небольшого зала на 50 мест, сегодня мы выросли до современного мультиплекса с 8 комфортабельными залами, включая зал IMAX и зал премиум-класса.</p>
+
+                <p>За 15 лет работы мы показали более 5000 фильмов и приняли более 3 миллионов зрителей. Наша команда постоянно работает над улучшением качества обслуживания и внедрением новых технологий, чтобы сделать ваш поход в кино максимально комфортным и запоминающимся.</p>
+
+                <h3>Наша миссия</h3>
+                <p>Мы стремимся создать идеальное пространство для погружения в мир кино, где каждый зритель может насладиться высочайшим качеством изображения и звука в комфортной обстановке. Наша цель — не просто показывать фильмы, а создавать незабываемые впечатления.</p>
+            </div>
+        </div>
+
+        <div class="about-stats">
+            <div class="stat-item">
+                <div class="stat-number">8</div>
+                <div class="stat-text">Современных залов</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">1500+</div>
+                <div class="stat-text">Посадочных мест</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">5000+</div>
+                <div class="stat-text">Показанных фильмов</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">3M+</div>
+                <div class="stat-text">Довольных зрителей</div>
+            </div>
+        </div>
+
+        <div class="team-section">
+            <h3 class="team-title">Наша команда</h3>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="img/team1.jpg" alt="Александр Петров">
+                    </div>
+                    <h4>Александр Петров</h4>
+                    <p class="member-position">Генеральный директор</p>
+                    <p class="member-bio">Более 15 лет опыта в киноиндустрии. Основатель и идейный вдохновитель CinemaX.</p>
+                </div>
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="img/team2.jpg" alt="Елена Сидорова">
+                    </div>
+                    <h4>Елена Сидорова</h4>
+                    <p class="member-position">Арт-директор</p>
+                    <p class="member-bio">Отвечает за репертуарную политику и специальные мероприятия кинотеатра.</p>
+                </div>
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="img/team3.jpg" alt="Дмитрий Иванов">
+                    </div>
+                    <h4>Дмитрий Иванов</h4>
+                    <p class="member-position">Технический директор</p>
+                    <p class="member-bio">Следит за качеством изображения и звука, внедряет новые технологии.</p>
+                </div>
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="img/team4.jpg" alt="Мария Козлова">
+                    </div>
+                    <h4>Мария Козлова</h4>
+                    <p class="member-position">Директор по маркетингу</p>
+                    <p class="member-bio">Разрабатывает стратегии продвижения и специальные предложения для зрителей.</p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Правила посещения -->
+    <section id="rules" class="section">
+        <div class="container">
+            <h2 class="section-title">Правила посещения</h2>
+
+            <div class="rules-content">
+                <div class="rules-sidebar">
+                    <div class="rules-nav">
+                        <h3>Содержание</h3>
+                        <ul>
+                            <li><a href="#general">Общие правила</a></li>
+                            <li><a href="#tickets">Билеты и бронирование</a></li>
+                            <li><a href="#hall">Правила поведения в зале</a></li>
+                            <li><a href="#food">Еда и напитки</a></li>
+                            <li><a href="#children">Посещение с детьми</a></li>
+                            <li><a href="#refunds">Возврат билетов</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="rules-main">
+                    <div class="rule-section" id="general">
+                        <h3>Общие правила</h3>
+                        <div class="rule-item">
+                            <div class="rule-icon">
+                                <i class="fas fa-info-circle"></i>
+                            </div>
+                            <div class="rule-text">
+                                <p>Кинотеатр CinemaX открыт ежедневно с 9:00 до 23:00. Первый сеанс начинается в 10:00, последний — в 22:30.</p>
+                            </div>
+                        </div>
+                        <div class="rule-item">
+                            <div class="rule-icon">
+                                <i class="fas fa-exclamation-triangle"></i>
+                            </div>
+                            <div class="rule-text">
+                                <p>Администрация кинотеатра имеет право отказать в обслуживании лицам, находящимся в состоянии алкогольного или наркотического опьянения.</p>
+                            </div>
+                        </div>
+                        <div class="rule-item">
+                            <div class="rule-icon">
+                                <i class="fas fa-ban"></i>
+                            </div>
+                            <div class="rule-text">
+                                <p>В кинотеатре запрещено курение, в том числе электронных сигарет и вейпов.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="rule-section" id="tickets">
+                        <h3>Билеты и бронирование</h3>
+                        <div class="rule-item">
+                            <div class="rule-icon">
+                                <i class="fas fa-ticket-alt"></i>
+                            </div>
+                            <div class="rule-text">
+                                <p>Билеты можно приобрести в кассах кинотеатра, через официальный сайт или мобильное приложение.</p>
+                            </div>
+                        </div>
+                        <div class="rule-item">
+                            <div class="rule-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="rule-text">
+                                <p>Бронирование билетов действительно в течение 30 минут. Если билеты не выкуплены в течение этого времени, бронь автоматически снимается.</p>
+                            </div>
+                        </div>
+                        <div class="rule-item">
+                            <div class="rule-icon">
+                                <i class="fas fa-user-check"></i>
+                            </div>
+                            <div class="rule-text">
+                                <p>При покупке билетов со скидкой (детский, студенческий, пенсионный) необходимо предъявить соответствующий документ.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="rule-section" id="hall">
+                        <h3>Правила поведения в зале</h3>
+                        <div class="rule-item">
+                            <div class="rule-icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <div class="rule-text">
+                                <p>Перед началом сеанса просим отключить звук мобильных телефонов и других устройств.</p>
+                            </div>
+                        </div>
+                        <div class="rule-item">
+                            <div class="rule-icon">
+                                <i class="fas fa-video"></i>
+                            </div>
+                            <div class="rule-text">
+                                <p>Видео- и фотосъемка в зале во время сеанса запрещена.</p>
+                            </div>
+                        </div>
+                        <div class="rule-item">
+                            <div class="rule-icon">
+                                <i class="fas fa-volume-up"></i>
+                            </div>
+                            <div class="rule-text">
+                                <p>Пожалуйста, соблюдайте тишину во время сеанса.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="rule-section" id="food">
+                        <h3>Еда и напитки</h3>
+                        <div class="rule-item">
+                            <div class="rule-icon">
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                            <div class="rule-text">
+                                <p>В кинозалы разрешается проносить еду и напитки, приобретенные в кинобаре CinemaX.</p>
+                            </div>
+                        </div>
+                        <div class="rule-item">
+                            <div class="rule-icon">
+                                <i class="fas fa-shopping-bag"></i>
+                            </div>
+                            <div class="rule-text">
+                                <p>Проносить еду и напитки, приобретенные за пределами кинотеатра, запрещено.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="rule-section" id="children">
+                        <h3>Посещение с детьми</h3>
+                        <div class="rule-item">
+                            <div class="rule-icon">
+                                <i class="fas fa-child"></i>
+                            </div>
+                            <div class="rule-text">
+                                <p>Дети до 6 лет допускаются на сеансы только в сопровождении взрослых.</p>
+                            </div>
+                        </div>
+                        <div class="rule-item">
+                            <div class="rule-icon">
+                                <i class="fas fa-id-card"></i>
+                            </div>
+                            <div class="rule-text">
+                                <p>При посещении фильмов с возрастными ограничениями администрация кинотеатра имеет право потребовать документ, подтверждающий возраст.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="rule-section" id="refunds">
+                        <h3>Возврат билетов</h3>
+                        <div class="rule-item">
+                            <div class="rule-icon">
+                                <i class="fas fa-undo"></i>
+                            </div>
+                            <div class="rule-text">
+                                <p>Возврат билетов возможен не позднее чем за 30 минут до начала сеанса.</p>
+                            </div>
+                        </div>
+                        <div class="rule-item">
+                            <div class="rule-icon">
+                                <i class="fas fa-receipt"></i>
+                            </div>
+                            <div class="rule-text">
+                                <p>Для возврата билета необходимо предъявить билет и документ, удостоверяющий личность.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Форма обратной связи -->
+    <section id="contact" class="section bg-gray">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2 class="section-title">Контакты</h2>
+                    <!-- Конактная инфа -->
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>г. Кокшетау, ул. Куанышева 34</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <p>+7 708 179 4125</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>ramzangeroev9@gmail.com</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <p>Ежедневно с 9:00 до 23:00</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://vk.com/ramzzzan" target="_blank"><i class="fab fa-vk"></i></a>
+                        <a href="https://t.me/ramzzzzan" target="_blank"><i class="fab fa-telegram"></i></a>
+                        <a href="https://www.instagram.com/_ramzzzan_?igsh=MThhdmgyOHZ1d3I1MA%3D%3D&utm_source=qr" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://youtube.com/@ramzzzan?si=oAOn_a_8bbq5IsAu" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Остались вопросы?</h3>
+                    <p>Заполните форму и мы свяжемся с вами</p>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Ваше имя" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Ваш email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" name="phone" placeholder="Ваш телефон">
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Ваше сообщение" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">Отправить</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Карта -->
+    <section class="map-section">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7963.182165193221!2d69.36741905089468!3d53.285455515503834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x424c944e5c689517%3A0x14a69e1dd19ccd0c!2sAlem%20Cinema!5e1!3m2!1sru!2skz!4v1747727881723!5m2!1sru!2skz" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </section>
+
+    <!-- Подписка на новости -->
+    <section class="subscribe-section">
+        <div class="container">
+            <div class="subscribe-content">
+                <h2>Подпишитесь на нашу рассылку</h2>
+                <p>Будьте в курсе всех новостей, акций и специальных предложений</p>
+                <form class="subscribe-form-large">
+                    <input type="email" placeholder="Ваш email">
+                    <button type="submit" class="btn-primary">Подписаться</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">Cinema<span>X</span></div>
+                    <p>Современный кинотеатр с лучшими фильмами и комфортными залами</p>
+                </div>
+                <div class="footer-col">
+                    <h4>О нас</h4>
+                    <ul>
+                        <li><a href="#about">О компании</a></li>
+                        <li><a href="#news">Новости</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Посетителям</h4>
+                    <ul>
+                        <li><a href="#rules">Правила посещения</a></li>
+                        <li><a href="#schedule">Расписание</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Подписка</h4>
+                    <p>Подпишитесь на новости и акции</p>
+                    <form class="subscribe-form">
+                        <input type="email" placeholder="Ваш email">
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 CinemaX. Все права защищены.</p>
+                <div class="footer-links">
+                    <a href="#" class="footer-link">Политика конфиденциальности</a>
+                    <a href="#" class="footer-link">Пользовательское соглашение</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модальное окно входа -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Вход в аккаунт</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <input type="email" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" placeholder="Пароль" required>
+                </div>
+                <button type="submit" class="btn-primary">Войти</button>
+                <div class="form-footer">
+                    <a href="#" class="forgot-password">Забыли пароль?</a>
+                    <p>Нет аккаунта? <a href="#" class="register-link">Зарегистрируйтесь</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Модальное окно регистрации -->
+    <div class="modal" id="registerModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Регистрация</h2>
+            <form id="registerForm">
+                <div class="form-group">
+                    <input type="text" placeholder="Имя" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" placeholder="Пароль" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" placeholder="Подтвердите пароль" required>
+                </div>
+                <button type="submit" class="btn-primary">Зарегистрироваться</button>
+                <div class="form-footer">
+                    <p>Уже есть аккаунт? <a href="#" class="back-to-login">Войти</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Модальное окно восстановления пароля -->
+    <div class="modal" id="forgotPasswordModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Восстановление пароля</h2>
+            <form id="forgotPasswordForm">
+                <div class="form-group">
+                    <input type="email" placeholder="Email" required>
+                </div>
+                <button type="submit" class="btn-primary">Восстановить</button>
+                <div class="form-footer">
+                    <p>Вспомнили пароль? <a href="#" class="back-to-login">Войти</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Модальное окно для трейлера -->
+    <div class="modal" id="trailerModal">
+        <div class="modal-content trailer-content">
+            <span class="close-modal">&times;</span>
+            <div class="trailer-container">
+                <iframe id="trailerFrame" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно для бронирования мест -->
+    <div class="modal" id="bookingModal">
+        <div class="modal-content booking-content">
+            <span class="close-modal">&times;</span>
+            <h2 id="bookingMovieTitle">Бронирование билетов</h2>
+
+            <div class="booking-steps">
+                <div class="booking-step active" data-step="1">
+                    <span class="step-number">1</span>
+                    <span class="step-text">Выбор сеанса</span>
+                </div>
+                <div class="booking-step" data-step="2">
+                    <span class="step-number">2</span>
+                    <span class="step-text">Выбор мест</span>
+                </div>
+                <div class="booking-step" data-step="3">
+                    <span class="step-number">3</span>
+                    <span class="step-text">Оплата</span>
+                </div>
+            </div>
+
+            <div class="booking-step-content" id="step1Content">
+                <h3>Выберите дату и время сеанса</h3>
+                <div class="date-selector">
+                    <button class="date-btn active" data-date="2025-06-15">15 июня</button>
+                    <button class="date-btn" data-date="2025-06-16">16 июня</button>
+                    <button class="date-btn" data-date="2025-06-17">17 июня</button>
+                    <button class="date-btn" data-date="2025-06-18">18 июня</button>
+                    <button class="date-btn" data-date="2025-06-19">19 июня</button>
+                </div>
+                <div class="time-selector">
+                    <button class="time-btn" data-time="10:00">10:00</button>
+                    <button class="time-btn" data-time="12:30">12:30</button>
+                    <button class="time-btn" data-time="15:00">15:00</button>
+                    <button class="time-btn" data-time="17:30">17:30</button>
+                    <button class="time-btn" data-time="20:00">20:00</button>
+                    <button class="time-btn" data-time="22:30">22:30</button>
+                </div>
+                <div class="booking-nav">
+                    <button class="btn-cancel" id="cancelBooking">Отмена</button>
+                    <button class="btn-primary" id="goToStep2" disabled>Далее</button>
+                </div>
+            </div>
+
+            <div class="booking-step-content" id="step2Content" style="display: none;">
+                <h3>Выберите места</h3>
+                <div class="seat-selection">
+                    <div class="screen">
+                        <p>Экран</p>
+                    </div>
+                    <div class="seat-map" id="seatMap">
+                        <!-- Места будут генерироваться через Java Script -->
+                    </div>
+                    <div class="seat-info">
+                        <div class="seat-type">
+                            <div class="seat available"></div>
+                            <span>Доступно</span>
+                        </div>
+                        <div class="seat-type">
+                            <div class="seat selected"></div>
+                            <span>Выбрано</span>
+                        </div>
+                        <div class="seat-type">
+                            <div class="seat occupied"></div>
+                            <span>Занято</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="booking-summary">
+                    <div class="summary-item">
+                        <span>Фильм:</span>
+                        <span id="summaryMovie">Название фильма</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Дата и время:</span>
+                        <span id="summaryDateTime">15 июня, 15:00</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Выбранные места:</span>
+                        <span id="summarySeats">Не выбраны</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Стоимость:</span>
+                        <span id="summaryPrice">0 тг</span>
+                    </div>
+                </div>
+                <div class="booking-nav">
+                    <button class="btn-cancel" id="backToStep1">Назад</button>
+                    <button class="btn-primary" id="goToStep3" disabled>Далее</button>
+                </div>
+            </div>
+
+            <div class="booking-step-content" id="step3Content" style="display: none;">
+                <h3>Оплата</h3>
+                <div class="payment-options">
+                    <div class="payment-option">
+                        <input type="radio" name="payment" id="card" checked>
+                        <label for="card">Банковская карта</label>
+                    </div>
+                    <div class="payment-option">
+                        <input type="radio" name="payment" id="applepay">
+                        <label for="applepay">Apple Pay</label>
+                    </div>
+                    <div class="payment-option">
+                        <input type="radio" name="payment" id="googlepay">
+                        <label for="googlepay">Google Pay</label>
+                    </div>
+                </div>
+                <div class="card-details">
+                    <div class="form-group">
+                        <label for="cardNumber">Номер карты</label>
+                        <input type="text" id="cardNumber" placeholder="XXXX XXXX XXXX XXXX" maxlength="19">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="expiryDate">Срок действия</label>
+                            <input type="text" id="expiryDate" placeholder="ММ/ГГ" maxlength="5">
+                        </div>
+                        <div class="form-group">
+                            <label for="cvv">CVV</label>
+                            <input type="text" id="cvv" placeholder="XXX" maxlength="3">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="cardName">Имя владельца</label>
+                        <input type="text" id="cardName" placeholder="Как указано на карте">
+                    </div>
+                </div>
+                <div class="booking-summary">
+                    <div class="summary-item">
+                        <span>Итого к оплате:</span>
+                        <span id="finalPrice">0 ₽</span>
+                    </div>
+                </div>
+                <div class="booking-nav">
+                    <button class="btn-cancel" id="backToStep2">Назад</button>
+                    <button class="btn-primary" id="confirmBooking">Подтвердить и оплатить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно успешного бронирования -->
+    <div class="modal" id="successModal">
+        <div class="modal-content success-content">
+            <span class="close-modal">&times;</span>
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2>Бронирование успешно!</h2>
+            <p>Ваши билеты забронированы. Подтверждение отправлено на вашу электронную почту.</p>
+            <div class="ticket-details">
+                <div class="ticket-item">
+                    <span>Фильм:</span>
+                    <span id="ticketMovie">Название фильма</span>
+                </div>
+                <div class="ticket-item">
+                    <span>Дата и время:</span>
+                    <span id="ticketDateTime">15 июня, 15:00</span>
+                </div>
+                <div class="ticket-item">
+                    <span>Места:</span>
+                    <span id="ticketSeats">Ряд 5, Места 10, 11</span>
+                </div>
+                <div class="ticket-item">
+                    <span>Код бронирования:</span>
+                    <span id="ticketCode">CX-12345</span>
+                </div>
+            </div>
+            <button class="btn-primary" id="closeSuccess">Закрыть</button>
+        </div>
+    </div>
+
+    <!-- Модальное окно с подробностями о фильме -->
+    <div class="modal" id="movieDetailsModal">
+        <div class="modal-content movie-details-content">
+            <span class="close-modal">&times;</span>
+            <div class="movie-details-grid">
+                <div class="movie-details-poster">
+                    <img id="movieDetailsPoster" src="img/movie1.jpg" alt="Постер фильма">
+                </div>
+                <div class="movie-details-info">
+                    <h3 id="movieDetailsTitle">Название фильма</h3>
+                    <div class="movie-details-meta">
+                        <div class="movie-details-meta-item">
+                            <i class="fas fa-star"></i>
+                            <span id="movieDetailsRating">8.7</span>
+                        </div>
+                        <div class="movie-details-meta-item">
+                            <i class="fas fa-certificate"></i>
+                            <span id="movieDetailsAge">16+</span>
+                        </div>
+                        <div class="movie-details-meta-item">
+                            <i class="fas fa-film"></i>
+                            <span id="movieDetailsGenre">Жанр</span>
+                        </div>
+                        <div class="movie-details-meta-item">
+                            <i class="far fa-clock"></i>
+                            <span id="movieDetailsDuration">2ч 15мин</span>
+                        </div>
+                    </div>
+                    <div class="movie-details-meta">
+                        <div class="movie-details-meta-item">
+                            <i class="fas fa-user-tie"></i>
+                            <strong>Режиссер:</strong>
+                            <span id="movieDetailsDirector">Имя режиссера</span>
+                        </div>
+                    </div>
+                    <div class="movie-details-meta">
+                        <div class="movie-details-meta-item">
+                            <i class="fas fa-users"></i>
+                            <strong>В ролях:</strong>
+                            <span id="movieDetailsActors">Актеры</span>
+                        </div>
+                    </div>
+                    <div class="movie-details-description" id="movieDetailsDescription">
+                        Описание фильма
+                    </div>
+                    <div class="movie-details-actions">
+                        <button class="btn btn-primary" id="movieDetailsBookBtn" data-movie="" data-id="">Купить билет</button>
+                        <button class="btn btn-outline watch-trailer" id="movieDetailsTrailerBtn" data-trailer="">
+                            <i class="fas fa-play"></i> Смотреть трейлер
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно с подробностями новости -->
+    <div class="modal" id="newsDetailsModal">
+        <div class="modal-content news-details-content">
+            <span class="close-modal">&times;</span>
+            <div class="news-details-header">
+                <span class="news-badge" id="newsDetailsBadge">Акция</span>
+                <h2 id="newsDetailsTitle">Заголовок новости</h2>
+                <div class="news-date" id="newsDetailsDate">15 июня 2025</div>
+            </div>
+            <div class="news-details-image">
+                <img id="newsDetailsImage" src="img/news1.jpg" alt="Изображение новости">
+            </div>
+            <div class="news-details-content-text" id="newsDetailsContent">
+                Содержание новости
+            </div>
+        </div>
+    </div>
+
+    <!-- Кнопка "Наверх" -->
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+</body>
+</html>
